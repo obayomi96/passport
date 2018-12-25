@@ -53,20 +53,27 @@ router.post('/register', function(req, res){
             email: email,
             username: username,
             password: password
-        }       
-        db.users.insert(newUser, function(err, doc){
-            if(err){
-                res.send(err);
-            } else{
-                console.log('User Added...');
+        }
+        
+        bcrypt.genSalt(10, function(err, salt){
+            bcrypt.hash(newUser.password, salt, function(err, hash){
+                newUser.password = hash;
 
-                // Success message
-                req.flash('Success', 'You are registered and can now log in');
-
-                // Redirect after register
-                res.location('/');
-                res.redirect('/');
-            }
+                db.users.insert(newUser, function(err, doc){
+                    if(err){
+                        res.send(err);
+                    } else{
+                        console.log('User Added...');
+        
+                        // Success message
+                        req.flash('Success', 'You are registered and can now log in');
+        
+                        // Redirect after register
+                        res.location('/');
+                        res.redirect('/');
+                    }
+                });
+            });
         });
     }
 });
