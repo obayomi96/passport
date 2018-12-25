@@ -9,7 +9,7 @@ var flash = require('connect-flash');
 var PORT = process.env.PORT || 3000;
 
 var routes = require('./routes/index');
-var routes = require('./routes/users');
+var users = require('./routes/users');
 
 var app = express();
 
@@ -62,7 +62,7 @@ app.use(function (req, res, next) {
 
 // Define Routes
 app.use('/', routes);
-app.use('/users', routes);
+app.use('/users', users);
 
 app.listen(PORT);
-console.log('Server started Successfully')
+console.log('Server started Successfully');

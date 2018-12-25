@@ -1,0 +1,33 @@
+{
+  "name": "passport-js-app",
+  "version": "1.0.0",
+  "description": "Login auth app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obayomi96/passport-js-app.git"
+  },
+  "author": "martins obaomi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obayomi96/passport-js-app/issues"
+  },
+  "homepage": "https://github.com/obayomi96/passport-js-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.2.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "mongojs": "^2.6.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
