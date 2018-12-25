@@ -61,6 +61,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+// To allow access to user information, create a global route to everthing
+app.get('*', function(req, res, next){
+    res.locals.user = req.user || null;
+    next();
+});
+
 // Define Routes
 app.use('/', routes);
 app.use('/users', users);
