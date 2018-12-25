@@ -121,4 +121,11 @@ function(req, res){
     res.redirect('/');
 });
 
+// Logout route
+router.get('/logout', function(req, res){
+    req.logout();
+    req.flash('Success', 'You have logged out');
+    res.redirect('/users/login');
+});
+
 module.exports = router;
