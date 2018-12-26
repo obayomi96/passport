@@ -1,8 +1,19 @@
 # passport-js-app
 Passport login app using Nodejs, express, mongoDB and ejs as Template engine
 
-1. Clone the repository
-2. Run npm install
-# Deploy
-3. Run node app or npm start
-# Run app on localhost:3000
+# Technologies
+. Nodejs
+. Express
+. MongoDB / MongoJS
+. Ejs
+. Bcrypt hashing
+. PassportJS
+. Bootstrap
+
+# Install dependencies
+. Clone the repository
+. Run npm install
+
+# Run app localhost:3000
+. node app or npm start
+
