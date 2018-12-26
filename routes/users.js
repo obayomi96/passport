@@ -20,11 +20,11 @@ router.get('/register', function(req, res){
 // Register - POST request
 router.post('/register', function(req, res){
     // get form values
-    const name      = req.body.name;
-    const email     = req.body.email;
-    const username  = req.body.username;
-    const password  = req.body.password;
-    const password2 = req.body.password2;
+    var name      = req.body.name;
+    var email     = req.body.email;
+    var username  = req.body.username;
+    var password  = req.body.password;
+    var password2 = req.body.password2;
 
     // validation
     req.checkBody('name', 'Name field is required').notEmpty();
@@ -48,7 +48,7 @@ router.post('/register', function(req, res){
             password2: password2
         });
     } else {
-        const newUser = {
+        var newUser = {
             name: name,
             email: email,
             username: username,
@@ -66,7 +66,7 @@ router.post('/register', function(req, res){
                         console.log('User Added...');
         
                         // Success message
-                        req.flash('Success', 'You are registered and can now log in');
+                        req.flash('success', 'You are registered and can now log in');
         
                         // Redirect after register
                         res.location('/');
