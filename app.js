@@ -73,3 +73,5 @@ app.use('/users', users);
 
 app.listen(PORT);
 console.log('Server started Successfully');
+
+module.exports = app;
