@@ -1,8 +1,15 @@
 <%- include('includes/header') %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"><strong>Passport App</strong></a>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/users/logout">Logout</a>
-</nav>
+    <div class="w-100 order-3" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/users/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
 <main role="main" class="container">
     <div class="starter-template">
       <h1>Welcome <%= user.name %></h1>
